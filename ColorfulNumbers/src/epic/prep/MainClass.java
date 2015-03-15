@@ -10,6 +10,7 @@ public class MainClass {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the number\n");
 		int input = scan.nextInt();
+		int returnInput = input;
 		int max_size = returnIntLength(input);
 		int[] inArray = new int[max_size];
 		
@@ -21,7 +22,8 @@ public class MainClass {
 		}
 		
 		//groups of two
-		int group_size = max_size - 1;
+		int group_size = max_size - 1; 
+		boolean isColorful = false;
 		for(int i=0; i<=group_size; i++)
 		{
 			
@@ -40,17 +42,22 @@ public class MainClass {
 				prod = product(num);
 				if(set.add(prod))
 				{
-					System.out.println("Added: " + prod);
-					System.out.println("is colorful so far");
+					isColorful = true;
 				}
 				else
 				{
-					System.out.println("Not a colorful number"+ prod);
-					System.exit(0);
+					isColorful = false;
+					break;
 				}
 			}
-			
+			if(!isColorful)
+				break;
 		}
+		
+		if(isColorful)
+			System.out.println(returnInput+ " is colorful.");
+		else
+			System.out.println(returnInput + " is not colorful");
 
 	}
 

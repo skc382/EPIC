@@ -7,9 +7,11 @@ public class MainClass {
 	public static HashSet<String> set = new HashSet<String>();
 	public static void main(String[] argc)
 	{
-		int n = noOfPermutations(4);
-		System.out.println(n);
+		//int n = noOfPermutations(4);
+		//System.out.println(n);
 		char[] ch = {'a','b','c','d'};
+		
+		int blah = '7' - '0';
 		
 		bellAlgo(ch);
 	}
@@ -54,17 +56,6 @@ public class MainClass {
 		
 	}
 	
-	
-	public static int noOfPermutations(int N)
-	{
-		int permutation = 1, i = 0;
-		
-		while(i < N)
-		{
-			permutation = permutation * (++i);
-		}
-		return permutation;
-	}
 
 	public static char[] swap(char[] a, int i, int j)
 	{
@@ -86,6 +77,8 @@ public class MainClass {
 		}
 		System.out.println();
 		set.add(val);
+		set.
+		
 	}
 }
 

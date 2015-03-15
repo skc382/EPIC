@@ -10,9 +10,10 @@ public class MainClass {
 	public static String RGBParse(String RGB)
 	{
 		
-		int r = Integer.parseInt(RGB.substring(0,1), 16);
-		int g = Integer.parseInt(RGB.substring(2,3), 16);
-		int b = Integer.parseInt(RGB.substring(3,4), 16);
+		
+		int r = Integer.parseInt(RGB.substring(0,2), 16);
+		int g = Integer.parseInt(RGB.substring(2,4), 16);
+		int b = Integer.parseInt(RGB.substring(4,6), 16);
 		
 		if(r == g && g == b)
 			return "RGB all are equal";
